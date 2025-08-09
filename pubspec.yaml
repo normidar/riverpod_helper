@@ -3,20 +3,20 @@ dependencies:
   auto_exporter_annotation: any
   flutter:
     sdk: flutter
-  flutter_riverpod: ^2.6.1
-  riverpod_annotation: ^2.6.1
-  shared_preferences: ^2.2.3
+  flutter_riverpod: ^2.0.0
+  riverpod_annotation: ^2.0.0
+  shared_preferences: ^2.0.0
 description: A helpful tool for riverpod developer.
 dev_dependencies:
   auto_exporter: any
-  build_runner: ^2.4.6
-  build_test: ^2.2.0
-  custom_lint: ^0.7.5
+  build_runner: ^2.0.0
+  build_test: ^2.0.0
+  custom_lint: ^0.7.0
   flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
-  riverpod_generator: ^2.6.1
-  riverpod_lint: ^2.6.1
+  riverpod_generator: ^2.0.0
+  riverpod_lint: ^2.0.0
   very_good_analysis: any
 environment:
   flutter: '>=1.17.0'

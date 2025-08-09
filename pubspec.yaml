@@ -27,6 +27,6 @@ topics:
   - state
   - riverpod
   - preferences
-  - state_management
+  - state-management
   - helper
 version: 0.0.3

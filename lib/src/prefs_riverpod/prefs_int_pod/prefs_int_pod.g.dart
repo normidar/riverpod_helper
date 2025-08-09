@@ -6,7 +6,7 @@ part of 'prefs_int_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsIntPodHash() => r'ba09a7ffa30d54f5e7977138e0c45f4f28d2bb2e';
+String _$prefsIntPodHash() => r'afbe5c95a48d660d2a1f7821ddee769e0a98a03e';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -32,7 +32,9 @@ class _SystemHash {
 abstract class _$PrefsIntPod extends BuildlessAutoDisposeAsyncNotifier<int?> {
   late final String key;
 
-  FutureOr<int?> build(String key);
+  FutureOr<int?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsIntPod].
@@ -45,15 +47,21 @@ class PrefsIntPodFamily extends Family<AsyncValue<int?>> {
   const PrefsIntPodFamily();
 
   /// See also [PrefsIntPod].
-  PrefsIntPodProvider call(String key) {
-    return PrefsIntPodProvider(key);
+  PrefsIntPodProvider call(
+    String key,
+  ) {
+    return PrefsIntPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsIntPodProvider getProviderOverride(
     covariant PrefsIntPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -75,8 +83,9 @@ class PrefsIntPodFamily extends Family<AsyncValue<int?>> {
 class PrefsIntPodProvider
     extends AutoDisposeAsyncNotifierProviderImpl<PrefsIntPod, int?> {
   /// See also [PrefsIntPod].
-  PrefsIntPodProvider(String key)
-      : this._internal(
+  PrefsIntPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsIntPod()..key = key,
           from: prefsIntPodProvider,
           name: r'prefsIntPodProvider',
@@ -103,8 +112,12 @@ class PrefsIntPodProvider
   final String key;
 
   @override
-  FutureOr<int?> runNotifierBuild(covariant PrefsIntPod notifier) {
-    return notifier.build(key);
+  FutureOr<int?> runNotifierBuild(
+    covariant PrefsIntPod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -157,6 +170,5 @@ class _PrefsIntPodProviderElement
   @override
   String get key => (origin as PrefsIntPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

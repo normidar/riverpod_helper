@@ -7,7 +7,7 @@ part of 'prefs_double_pod.dart';
 // **************************************************************************
 
 String _$prefsAliveDoublePodHash() =>
-    r'92213aa5af2bc94d4020e697d17a959c358d70ab';
+    r'efb26efdc4218ccccc8e8cd5a00684a5a08c5bda';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -33,7 +33,9 @@ class _SystemHash {
 abstract class _$PrefsAliveDoublePod extends BuildlessAsyncNotifier<double?> {
   late final String key;
 
-  FutureOr<double?> build(String key);
+  FutureOr<double?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsAliveDoublePod].
@@ -46,15 +48,21 @@ class PrefsAliveDoublePodFamily extends Family<AsyncValue<double?>> {
   const PrefsAliveDoublePodFamily();
 
   /// See also [PrefsAliveDoublePod].
-  PrefsAliveDoublePodProvider call(String key) {
-    return PrefsAliveDoublePodProvider(key);
+  PrefsAliveDoublePodProvider call(
+    String key,
+  ) {
+    return PrefsAliveDoublePodProvider(
+      key,
+    );
   }
 
   @override
   PrefsAliveDoublePodProvider getProviderOverride(
     covariant PrefsAliveDoublePodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -76,8 +84,9 @@ class PrefsAliveDoublePodFamily extends Family<AsyncValue<double?>> {
 class PrefsAliveDoublePodProvider
     extends AsyncNotifierProviderImpl<PrefsAliveDoublePod, double?> {
   /// See also [PrefsAliveDoublePod].
-  PrefsAliveDoublePodProvider(String key)
-      : this._internal(
+  PrefsAliveDoublePodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsAliveDoublePod()..key = key,
           from: prefsAliveDoublePodProvider,
           name: r'prefsAliveDoublePodProvider',
@@ -104,8 +113,12 @@ class PrefsAliveDoublePodProvider
   final String key;
 
   @override
-  FutureOr<double?> runNotifierBuild(covariant PrefsAliveDoublePod notifier) {
-    return notifier.build(key);
+  FutureOr<double?> runNotifierBuild(
+    covariant PrefsAliveDoublePod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -158,6 +171,5 @@ class _PrefsAliveDoublePodProviderElement
   @override
   String get key => (origin as PrefsAliveDoublePodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

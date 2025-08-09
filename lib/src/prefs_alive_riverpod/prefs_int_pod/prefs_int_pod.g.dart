@@ -6,7 +6,7 @@ part of 'prefs_int_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsAliveIntPodHash() => r'90f38071a4b6cf0da0aa36839409123b41b9d682';
+String _$prefsAliveIntPodHash() => r'd586abb5ee4b2a341c61d8dcdb0781f2fa03595d';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -32,7 +32,9 @@ class _SystemHash {
 abstract class _$PrefsAliveIntPod extends BuildlessAsyncNotifier<int?> {
   late final String key;
 
-  FutureOr<int?> build(String key);
+  FutureOr<int?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsAliveIntPod].
@@ -45,15 +47,21 @@ class PrefsAliveIntPodFamily extends Family<AsyncValue<int?>> {
   const PrefsAliveIntPodFamily();
 
   /// See also [PrefsAliveIntPod].
-  PrefsAliveIntPodProvider call(String key) {
-    return PrefsAliveIntPodProvider(key);
+  PrefsAliveIntPodProvider call(
+    String key,
+  ) {
+    return PrefsAliveIntPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsAliveIntPodProvider getProviderOverride(
     covariant PrefsAliveIntPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -75,8 +83,9 @@ class PrefsAliveIntPodFamily extends Family<AsyncValue<int?>> {
 class PrefsAliveIntPodProvider
     extends AsyncNotifierProviderImpl<PrefsAliveIntPod, int?> {
   /// See also [PrefsAliveIntPod].
-  PrefsAliveIntPodProvider(String key)
-      : this._internal(
+  PrefsAliveIntPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsAliveIntPod()..key = key,
           from: prefsAliveIntPodProvider,
           name: r'prefsAliveIntPodProvider',
@@ -103,8 +112,12 @@ class PrefsAliveIntPodProvider
   final String key;
 
   @override
-  FutureOr<int?> runNotifierBuild(covariant PrefsAliveIntPod notifier) {
-    return notifier.build(key);
+  FutureOr<int?> runNotifierBuild(
+    covariant PrefsAliveIntPod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -157,6 +170,5 @@ class _PrefsAliveIntPodProviderElement
   @override
   String get key => (origin as PrefsAliveIntPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

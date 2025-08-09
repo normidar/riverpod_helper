@@ -13,13 +13,13 @@ class PrefsAliveIntPod extends _$PrefsAliveIntPod {
 
   Future<void> removeValue() async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.remove(key);
+    await prefs.remove(key);
     state = const AsyncData(null);
   }
 
   Future<void> setValue(int value) async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.setInt(key, value);
+    await prefs.setInt(key, value);
     state = AsyncData(value);
   }
 }

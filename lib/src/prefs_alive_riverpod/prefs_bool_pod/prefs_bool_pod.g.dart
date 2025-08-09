@@ -6,7 +6,7 @@ part of 'prefs_bool_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsAliveBoolPodHash() => r'bd58644c983e309c264c6b133ae5e91b711d6d9e';
+String _$prefsAliveBoolPodHash() => r'08837cdb741cbd052a3212c3629190e10d4ebaff';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -32,7 +32,9 @@ class _SystemHash {
 abstract class _$PrefsAliveBoolPod extends BuildlessAsyncNotifier<bool?> {
   late final String key;
 
-  FutureOr<bool?> build(String key);
+  FutureOr<bool?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsAliveBoolPod].
@@ -45,15 +47,21 @@ class PrefsAliveBoolPodFamily extends Family<AsyncValue<bool?>> {
   const PrefsAliveBoolPodFamily();
 
   /// See also [PrefsAliveBoolPod].
-  PrefsAliveBoolPodProvider call(String key) {
-    return PrefsAliveBoolPodProvider(key);
+  PrefsAliveBoolPodProvider call(
+    String key,
+  ) {
+    return PrefsAliveBoolPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsAliveBoolPodProvider getProviderOverride(
     covariant PrefsAliveBoolPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -75,8 +83,9 @@ class PrefsAliveBoolPodFamily extends Family<AsyncValue<bool?>> {
 class PrefsAliveBoolPodProvider
     extends AsyncNotifierProviderImpl<PrefsAliveBoolPod, bool?> {
   /// See also [PrefsAliveBoolPod].
-  PrefsAliveBoolPodProvider(String key)
-      : this._internal(
+  PrefsAliveBoolPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsAliveBoolPod()..key = key,
           from: prefsAliveBoolPodProvider,
           name: r'prefsAliveBoolPodProvider',
@@ -103,8 +112,12 @@ class PrefsAliveBoolPodProvider
   final String key;
 
   @override
-  FutureOr<bool?> runNotifierBuild(covariant PrefsAliveBoolPod notifier) {
-    return notifier.build(key);
+  FutureOr<bool?> runNotifierBuild(
+    covariant PrefsAliveBoolPod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -157,6 +170,5 @@ class _PrefsAliveBoolPodProviderElement
   @override
   String get key => (origin as PrefsAliveBoolPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

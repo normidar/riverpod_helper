@@ -13,13 +13,13 @@ class PrefsDoublePod extends _$PrefsDoublePod {
 
   Future<void> removeValue() async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.remove(key);
+    await prefs.remove(key);
     state = const AsyncData(null);
   }
 
   Future<void> setValue(double value) async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.setDouble(key, value);
+    await prefs.setDouble(key, value);
     state = AsyncData(value);
   }
 }

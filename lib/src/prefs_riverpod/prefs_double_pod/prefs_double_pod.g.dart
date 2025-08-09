@@ -6,7 +6,7 @@ part of 'prefs_double_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsDoublePodHash() => r'ed3edc7b1a3eb312126c0ed577d38470c3c35936';
+String _$prefsDoublePodHash() => r'1464ab19c4a8b405966f3775906b7aa321671925';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -33,7 +33,9 @@ abstract class _$PrefsDoublePod
     extends BuildlessAutoDisposeAsyncNotifier<double?> {
   late final String key;
 
-  FutureOr<double?> build(String key);
+  FutureOr<double?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsDoublePod].
@@ -46,15 +48,21 @@ class PrefsDoublePodFamily extends Family<AsyncValue<double?>> {
   const PrefsDoublePodFamily();
 
   /// See also [PrefsDoublePod].
-  PrefsDoublePodProvider call(String key) {
-    return PrefsDoublePodProvider(key);
+  PrefsDoublePodProvider call(
+    String key,
+  ) {
+    return PrefsDoublePodProvider(
+      key,
+    );
   }
 
   @override
   PrefsDoublePodProvider getProviderOverride(
     covariant PrefsDoublePodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -76,8 +84,9 @@ class PrefsDoublePodFamily extends Family<AsyncValue<double?>> {
 class PrefsDoublePodProvider
     extends AutoDisposeAsyncNotifierProviderImpl<PrefsDoublePod, double?> {
   /// See also [PrefsDoublePod].
-  PrefsDoublePodProvider(String key)
-      : this._internal(
+  PrefsDoublePodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsDoublePod()..key = key,
           from: prefsDoublePodProvider,
           name: r'prefsDoublePodProvider',
@@ -104,8 +113,12 @@ class PrefsDoublePodProvider
   final String key;
 
   @override
-  FutureOr<double?> runNotifierBuild(covariant PrefsDoublePod notifier) {
-    return notifier.build(key);
+  FutureOr<double?> runNotifierBuild(
+    covariant PrefsDoublePod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -159,6 +172,5 @@ class _PrefsDoublePodProviderElement
   @override
   String get key => (origin as PrefsDoublePodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

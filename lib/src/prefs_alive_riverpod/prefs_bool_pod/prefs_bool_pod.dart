@@ -1,3 +1,6 @@
+// ignore: lines_longer_than_80_chars
+// ignore_for_file: public_member_api_docs, document_ignores, avoid_positional_boolean_parameters
+
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -13,13 +16,13 @@ class PrefsAliveBoolPod extends _$PrefsAliveBoolPod {
 
   Future<void> removeValue() async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.remove(key);
+    await prefs.remove(key);
     state = const AsyncData(null);
   }
 
   Future<void> setValue(bool value) async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.setBool(key, value);
+    await prefs.setBool(key, value);
     state = AsyncData(value);
   }
 }

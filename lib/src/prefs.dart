@@ -51,30 +51,33 @@ class Prefs {
   static Future<T> set<T>(String key, T value) async {
     final prefs = await SharedPreferences.getInstance();
     if (T == bool) {
-      prefs.setBool(key, value as bool);
+      await prefs.setBool(key, value as bool);
     } else if (T == int) {
-      prefs.setInt(key, value as int);
+      await prefs.setInt(key, value as int);
     } else if (T == double) {
-      prefs.setDouble(key, value as double);
+      await prefs.setDouble(key, value as double);
     } else if (T == String) {
-      prefs.setString(key, value as String);
+      await prefs.setString(key, value as String);
     } else if (T == List<String>) {
-      prefs.setStringList(key, value as List<String>);
+      await prefs.setStringList(key, value as List<String>);
     } else {
       throw Exception('Type $T is not supported');
     }
     return value;
   }
 
-  static Future update<T>(String key, T Function(T?) updater) async {
+  static Future<void> update<T>(String key, T Function(T?) updater) async {
     final value = await getOrNull<T>(key);
     final newValue = updater(value);
-    set(key, newValue);
+    await set(key, newValue);
   }
 
-  static Future updateForcePipe<T>(String key, T Function(T) updater) async {
+  static Future<void> updateForcePipe<T>(
+    String key,
+    T Function(T) updater,
+  ) async {
     final value = await getOrNull<T>(key);
     final newValue = updater(value as T);
-    set(key, newValue);
+    await set(key, newValue);
   }
 }

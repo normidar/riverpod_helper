@@ -37,8 +37,8 @@ If you are using vscode, add this to your `.vscode/riverpod.code-snippets`:
       "\t$2 build() {",
       "\t\treturn ;",
       "\t}",
-      "}"
-    ]
+      "}",
+    ],
   },
   "New Future Pod": {
     "scope": "dart",
@@ -55,8 +55,8 @@ If you are using vscode, add this to your `.vscode/riverpod.code-snippets`:
       "\tFuture<$2> build() async {",
       "\t\treturn ;",
       "\t}",
-      "}"
-    ]
+      "}",
+    ],
   },
   "New Stream Pod": {
     "scope": "dart",
@@ -73,8 +73,8 @@ If you are using vscode, add this to your `.vscode/riverpod.code-snippets`:
       "\tStream<$2> build() {",
       "\t\treturn ;",
       "\t}",
-      "}"
-    ]
+      "}",
+    ],
   },
   "Consumer Stateless Widget": {
     "scope": "dart",
@@ -92,8 +92,8 @@ If you are using vscode, add this to your `.vscode/riverpod.code-snippets`:
       "\tWidget build(BuildContext context, WidgetRef ref) {",
       "\t\treturn Container();",
       "\t}",
-      "}"
-    ]
+      "}",
+    ],
   },
   "Consumer Stateful Widget": {
     "scope": "dart",
@@ -116,8 +116,8 @@ If you are using vscode, add this to your `.vscode/riverpod.code-snippets`:
       "\tWidget build(BuildContext context) {",
       "\t\treturn Container();",
       "\t}",
-      "}"
-    ]
+      "}",
+    ],
   },
   "Switch Po all": {
     "scope": "dart",
@@ -128,15 +128,15 @@ If you are using vscode, add this to your `.vscode/riverpod.code-snippets`:
       "AsyncData(:final value) => Container(),",
       "AsyncLoading() => const Center(child: CircularProgressIndicator()),",
       "AsyncError(:final error, :final stackTrace) => RiverpodErrorView(widgetName: '$this', error: error, stackTrace: stackTrace),",
-      "}"
-    ]
+      "}",
+    ],
   },
   "Switch Po Data": {
     "scope": "dart",
     "prefix": "rp_swdata",
     "description": "Create data case",
-    "body": ["AsyncData(:final value) => "]
-  }
+    "body": ["AsyncData(:final value) => "],
+  },
 }
 ```
 
@@ -193,8 +193,8 @@ If you offten use prefs you can add this to your `.code-snippets` file.
       "\t\tstate = AsyncData(await Prefs.set<bool>(prefsKey, value));",
       "",
       "\tvoid toggle() async => setState(!state.data);",
-      "}"
-    ]
+      "}",
+    ],
   },
   "Prefs int": {
     "scope": "dart",
@@ -217,8 +217,8 @@ If you offten use prefs you can add this to your `.code-snippets` file.
       "\t\tstate = AsyncData(await Prefs.set<int>(prefsKey, value));",
       "",
       "\tvoid increment() async => setState(state.data + 1);",
-      "}"
-    ]
+      "}",
+    ],
   },
   "Prefs double": {
     "scope": "dart",
@@ -241,8 +241,8 @@ If you offten use prefs you can add this to your `.code-snippets` file.
       "\t\tstate = AsyncData(await Prefs.set<double>(prefsKey, value));",
       "",
       "\tvoid increment() async => setState(state.data + 1);",
-      "}"
-    ]
+      "}",
+    ],
   },
   "Prefs string": {
     "scope": "dart",
@@ -265,8 +265,8 @@ If you offten use prefs you can add this to your `.code-snippets` file.
       "\t\tstate = AsyncData(await Prefs.set<String>(prefsKey, value));",
       "",
       "\tvoid increment() async => setState(state.data + 1);",
-      "}"
-    ]
+      "}",
+    ],
   },
   "Prefs list": {
     "scope": "dart",
@@ -289,8 +289,8 @@ If you offten use prefs you can add this to your `.code-snippets` file.
       "\t\tstate = AsyncData(await Prefs.set<List<$2>>(prefsKey, value));",
       "",
       "\tvoid increment() async => setState(state.data + 1);",
-      "}"
-    ]
-  }
+      "}",
+    ],
+  },
 }
 ```

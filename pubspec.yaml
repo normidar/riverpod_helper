@@ -17,6 +17,7 @@ dev_dependencies:
     sdk: flutter
   riverpod_generator: ^2.6.1
   riverpod_lint: ^2.6.1
+  very_good_analysis: any
 environment:
   flutter: '>=1.17.0'
   sdk: ^3.0.0

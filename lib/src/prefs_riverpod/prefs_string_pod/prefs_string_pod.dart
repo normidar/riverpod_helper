@@ -13,13 +13,13 @@ class PrefsStringPod extends _$PrefsStringPod {
 
   Future<void> removeValue() async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.remove(key);
+    await prefs.remove(key);
     state = const AsyncData(null);
   }
 
   Future<void> setValue(String value) async {
     final prefs = await SharedPreferences.getInstance();
-    prefs.setString(key, value);
+    await prefs.setString(key, value);
     state = AsyncData(value);
   }
 }

@@ -6,7 +6,7 @@ part of 'prefs_string_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsStringPodHash() => r'bb2e8daab72a72e59540256ea5b3f7e5760fe9ab';
+String _$prefsStringPodHash() => r'f6f85f04947d418e4b42d2769b0c9654d89a9bd2';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -33,7 +33,9 @@ abstract class _$PrefsStringPod
     extends BuildlessAutoDisposeAsyncNotifier<String?> {
   late final String key;
 
-  FutureOr<String?> build(String key);
+  FutureOr<String?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsStringPod].
@@ -46,15 +48,21 @@ class PrefsStringPodFamily extends Family<AsyncValue<String?>> {
   const PrefsStringPodFamily();
 
   /// See also [PrefsStringPod].
-  PrefsStringPodProvider call(String key) {
-    return PrefsStringPodProvider(key);
+  PrefsStringPodProvider call(
+    String key,
+  ) {
+    return PrefsStringPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsStringPodProvider getProviderOverride(
     covariant PrefsStringPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -76,8 +84,9 @@ class PrefsStringPodFamily extends Family<AsyncValue<String?>> {
 class PrefsStringPodProvider
     extends AutoDisposeAsyncNotifierProviderImpl<PrefsStringPod, String?> {
   /// See also [PrefsStringPod].
-  PrefsStringPodProvider(String key)
-      : this._internal(
+  PrefsStringPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsStringPod()..key = key,
           from: prefsStringPodProvider,
           name: r'prefsStringPodProvider',
@@ -104,8 +113,12 @@ class PrefsStringPodProvider
   final String key;
 
   @override
-  FutureOr<String?> runNotifierBuild(covariant PrefsStringPod notifier) {
-    return notifier.build(key);
+  FutureOr<String?> runNotifierBuild(
+    covariant PrefsStringPod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -159,6 +172,5 @@ class _PrefsStringPodProviderElement
   @override
   String get key => (origin as PrefsStringPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

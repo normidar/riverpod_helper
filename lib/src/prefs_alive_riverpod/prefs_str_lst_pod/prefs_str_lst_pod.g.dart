@@ -7,7 +7,7 @@ part of 'prefs_str_lst_pod.dart';
 // **************************************************************************
 
 String _$prefsAliveStrLstPodHash() =>
-    r'0992ea838a3c2a83267d844eec2fe8a669e83c35';
+    r'7b4e67a4f76975b88b132debd0614a0e3df7937c';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -34,7 +34,9 @@ abstract class _$PrefsAliveStrLstPod
     extends BuildlessAsyncNotifier<List<String>?> {
   late final String key;
 
-  FutureOr<List<String>?> build(String key);
+  FutureOr<List<String>?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsAliveStrLstPod].
@@ -47,15 +49,21 @@ class PrefsAliveStrLstPodFamily extends Family<AsyncValue<List<String>?>> {
   const PrefsAliveStrLstPodFamily();
 
   /// See also [PrefsAliveStrLstPod].
-  PrefsAliveStrLstPodProvider call(String key) {
-    return PrefsAliveStrLstPodProvider(key);
+  PrefsAliveStrLstPodProvider call(
+    String key,
+  ) {
+    return PrefsAliveStrLstPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsAliveStrLstPodProvider getProviderOverride(
     covariant PrefsAliveStrLstPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -77,8 +85,9 @@ class PrefsAliveStrLstPodFamily extends Family<AsyncValue<List<String>?>> {
 class PrefsAliveStrLstPodProvider
     extends AsyncNotifierProviderImpl<PrefsAliveStrLstPod, List<String>?> {
   /// See also [PrefsAliveStrLstPod].
-  PrefsAliveStrLstPodProvider(String key)
-      : this._internal(
+  PrefsAliveStrLstPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsAliveStrLstPod()..key = key,
           from: prefsAliveStrLstPodProvider,
           name: r'prefsAliveStrLstPodProvider',
@@ -108,7 +117,9 @@ class PrefsAliveStrLstPodProvider
   FutureOr<List<String>?> runNotifierBuild(
     covariant PrefsAliveStrLstPod notifier,
   ) {
-    return notifier.build(key);
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -162,6 +173,5 @@ class _PrefsAliveStrLstPodProviderElement
   @override
   String get key => (origin as PrefsAliveStrLstPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

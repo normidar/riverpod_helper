@@ -7,7 +7,7 @@ part of 'prefs_string_pod.dart';
 // **************************************************************************
 
 String _$prefsAliveStringPodHash() =>
-    r'd954764a456a2fea217b4b63ef0f0ad151b25f4c';
+    r'5837b57358c0d5c87e6bd95a7fa9c1efb5719a96';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -33,7 +33,9 @@ class _SystemHash {
 abstract class _$PrefsAliveStringPod extends BuildlessAsyncNotifier<String?> {
   late final String key;
 
-  FutureOr<String?> build(String key);
+  FutureOr<String?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsAliveStringPod].
@@ -46,15 +48,21 @@ class PrefsAliveStringPodFamily extends Family<AsyncValue<String?>> {
   const PrefsAliveStringPodFamily();
 
   /// See also [PrefsAliveStringPod].
-  PrefsAliveStringPodProvider call(String key) {
-    return PrefsAliveStringPodProvider(key);
+  PrefsAliveStringPodProvider call(
+    String key,
+  ) {
+    return PrefsAliveStringPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsAliveStringPodProvider getProviderOverride(
     covariant PrefsAliveStringPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -76,8 +84,9 @@ class PrefsAliveStringPodFamily extends Family<AsyncValue<String?>> {
 class PrefsAliveStringPodProvider
     extends AsyncNotifierProviderImpl<PrefsAliveStringPod, String?> {
   /// See also [PrefsAliveStringPod].
-  PrefsAliveStringPodProvider(String key)
-      : this._internal(
+  PrefsAliveStringPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsAliveStringPod()..key = key,
           from: prefsAliveStringPodProvider,
           name: r'prefsAliveStringPodProvider',
@@ -104,8 +113,12 @@ class PrefsAliveStringPodProvider
   final String key;
 
   @override
-  FutureOr<String?> runNotifierBuild(covariant PrefsAliveStringPod notifier) {
-    return notifier.build(key);
+  FutureOr<String?> runNotifierBuild(
+    covariant PrefsAliveStringPod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -158,6 +171,5 @@ class _PrefsAliveStringPodProviderElement
   @override
   String get key => (origin as PrefsAliveStringPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

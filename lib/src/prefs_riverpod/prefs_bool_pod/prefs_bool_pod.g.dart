@@ -6,7 +6,7 @@ part of 'prefs_bool_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsBoolPodHash() => r'e97a65e7a590a2141cc33b376bb2513aa79b5ce3';
+String _$prefsBoolPodHash() => r'7309205d5b8596bc7a2578c8686d8e0eb6aaaf0e';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -32,7 +32,9 @@ class _SystemHash {
 abstract class _$PrefsBoolPod extends BuildlessAutoDisposeAsyncNotifier<bool?> {
   late final String key;
 
-  FutureOr<bool?> build(String key);
+  FutureOr<bool?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsBoolPod].
@@ -45,15 +47,21 @@ class PrefsBoolPodFamily extends Family<AsyncValue<bool?>> {
   const PrefsBoolPodFamily();
 
   /// See also [PrefsBoolPod].
-  PrefsBoolPodProvider call(String key) {
-    return PrefsBoolPodProvider(key);
+  PrefsBoolPodProvider call(
+    String key,
+  ) {
+    return PrefsBoolPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsBoolPodProvider getProviderOverride(
     covariant PrefsBoolPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -75,8 +83,9 @@ class PrefsBoolPodFamily extends Family<AsyncValue<bool?>> {
 class PrefsBoolPodProvider
     extends AutoDisposeAsyncNotifierProviderImpl<PrefsBoolPod, bool?> {
   /// See also [PrefsBoolPod].
-  PrefsBoolPodProvider(String key)
-      : this._internal(
+  PrefsBoolPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsBoolPod()..key = key,
           from: prefsBoolPodProvider,
           name: r'prefsBoolPodProvider',
@@ -103,8 +112,12 @@ class PrefsBoolPodProvider
   final String key;
 
   @override
-  FutureOr<bool?> runNotifierBuild(covariant PrefsBoolPod notifier) {
-    return notifier.build(key);
+  FutureOr<bool?> runNotifierBuild(
+    covariant PrefsBoolPod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -157,6 +170,5 @@ class _PrefsBoolPodProviderElement
   @override
   String get key => (origin as PrefsBoolPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

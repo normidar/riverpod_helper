@@ -6,7 +6,7 @@ part of 'prefs_str_lst_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsStrLstPodHash() => r'2b568a5b0e56eb50dd481179c3cc963c26c85f5a';
+String _$prefsStrLstPodHash() => r'fd2878ce4cd2ffebd7ba64941b49f07fd4263442';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -33,7 +33,9 @@ abstract class _$PrefsStrLstPod
     extends BuildlessAutoDisposeAsyncNotifier<List<String>?> {
   late final String key;
 
-  FutureOr<List<String>?> build(String key);
+  FutureOr<List<String>?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsStrLstPod].
@@ -46,15 +48,21 @@ class PrefsStrLstPodFamily extends Family<AsyncValue<List<String>?>> {
   const PrefsStrLstPodFamily();
 
   /// See also [PrefsStrLstPod].
-  PrefsStrLstPodProvider call(String key) {
-    return PrefsStrLstPodProvider(key);
+  PrefsStrLstPodProvider call(
+    String key,
+  ) {
+    return PrefsStrLstPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsStrLstPodProvider getProviderOverride(
     covariant PrefsStrLstPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -76,8 +84,9 @@ class PrefsStrLstPodFamily extends Family<AsyncValue<List<String>?>> {
 class PrefsStrLstPodProvider extends AutoDisposeAsyncNotifierProviderImpl<
     PrefsStrLstPod, List<String>?> {
   /// See also [PrefsStrLstPod].
-  PrefsStrLstPodProvider(String key)
-      : this._internal(
+  PrefsStrLstPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsStrLstPod()..key = key,
           from: prefsStrLstPodProvider,
           name: r'prefsStrLstPodProvider',
@@ -104,8 +113,12 @@ class PrefsStrLstPodProvider extends AutoDisposeAsyncNotifierProviderImpl<
   final String key;
 
   @override
-  FutureOr<List<String>?> runNotifierBuild(covariant PrefsStrLstPod notifier) {
-    return notifier.build(key);
+  FutureOr<List<String>?> runNotifierBuild(
+    covariant PrefsStrLstPod notifier,
+  ) {
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -159,6 +172,5 @@ class _PrefsStrLstPodProviderElement
   @override
   String get key => (origin as PrefsStrLstPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

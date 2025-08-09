@@ -6,7 +6,7 @@ part of 'prefs_map_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsMapPodHash() => r'47ceb183889665b443dd0f0297ffef501f17671e';
+String _$prefsMapPodHash() => r'e2ba21ad210e263f00436815f427df9d9b1ebba0';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -33,7 +33,9 @@ abstract class _$PrefsMapPod
     extends BuildlessAutoDisposeAsyncNotifier<Map<String, dynamic>?> {
   late final String key;
 
-  FutureOr<Map<String, dynamic>?> build(String key);
+  FutureOr<Map<String, dynamic>?> build(
+    String key,
+  );
 }
 
 /// See also [PrefsMapPod].
@@ -46,15 +48,21 @@ class PrefsMapPodFamily extends Family<AsyncValue<Map<String, dynamic>?>> {
   const PrefsMapPodFamily();
 
   /// See also [PrefsMapPod].
-  PrefsMapPodProvider call(String key) {
-    return PrefsMapPodProvider(key);
+  PrefsMapPodProvider call(
+    String key,
+  ) {
+    return PrefsMapPodProvider(
+      key,
+    );
   }
 
   @override
   PrefsMapPodProvider getProviderOverride(
     covariant PrefsMapPodProvider provider,
   ) {
-    return call(provider.key);
+    return call(
+      provider.key,
+    );
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -76,8 +84,9 @@ class PrefsMapPodFamily extends Family<AsyncValue<Map<String, dynamic>?>> {
 class PrefsMapPodProvider extends AutoDisposeAsyncNotifierProviderImpl<
     PrefsMapPod, Map<String, dynamic>?> {
   /// See also [PrefsMapPod].
-  PrefsMapPodProvider(String key)
-      : this._internal(
+  PrefsMapPodProvider(
+    String key,
+  ) : this._internal(
           () => PrefsMapPod()..key = key,
           from: prefsMapPodProvider,
           name: r'prefsMapPodProvider',
@@ -107,7 +116,9 @@ class PrefsMapPodProvider extends AutoDisposeAsyncNotifierProviderImpl<
   FutureOr<Map<String, dynamic>?> runNotifierBuild(
     covariant PrefsMapPod notifier,
   ) {
-    return notifier.build(key);
+    return notifier.build(
+      key,
+    );
   }
 
   @override
@@ -162,6 +173,5 @@ class _PrefsMapPodProviderElement
   @override
   String get key => (origin as PrefsMapPodProvider).key;
 }
-
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

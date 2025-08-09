@@ -1,6 +1,6 @@
 ---
 dependencies:
-  auto_exporter_annotation: any
+  auto_exporter_annotation: ^1.0.0
   flutter:
     sdk: flutter
   flutter_riverpod: ^2.0.0

@@ -1,24 +1,31 @@
 ---
 dependencies:
+  auto_exporter_annotation: any
   flutter:
     sdk: flutter
-description: A Flutter package template.
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  shared_preferences: ^2.2.3
+description: A helpful tool for riverpod developer.
 dev_dependencies:
-  auto_exporter: ^4.0.0
-  build_runner: ^2.6.0
-  flutter_lints: ^4.0.0
+  auto_exporter: any
+  build_runner: ^2.4.6
+  build_test: ^2.2.0
+  custom_lint: ^0.7.5
+  flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter
-  very_good_analysis: any
+  riverpod_generator: ^2.6.1
+  riverpod_lint: ^2.6.1
 environment:
   flutter: '>=1.17.0'
   sdk: ^3.0.0
 homepage: https://github.com/normidar/riverpod_helper
 name: riverpod_helper
 topics:
-  - a
-  - b
-  - c
-  - d
-  - e
-version: 0.0.1
+  - state
+  - riverpod
+  - preferences
+  - state_management
+  - helper
+version: 0.0.3

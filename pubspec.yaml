@@ -10,7 +10,7 @@ description: A helpful tool for riverpod developer.
 dev_dependencies:
   auto_exporter: any
   build_runner: ^2.0.0
-  build_test: ^2.0.0
+  build_test: ">=2.0.0 <4.0.0"
   custom_lint: ^0.7.0
   flutter_lints: ^3.0.0
   flutter_test:

@@ -17,12 +17,12 @@ class PrefsAliveBoolPod extends _$PrefsAliveBoolPod {
   Future<void> removeValue() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(key);
-    state = const AsyncData(null);
+    ref.invalidateSelf();
   }
 
   Future<void> setValue(bool value) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(key, value);
-    state = AsyncData(value);
+    ref.invalidateSelf();
   }
 }

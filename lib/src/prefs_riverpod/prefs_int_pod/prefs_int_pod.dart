@@ -14,12 +14,12 @@ class PrefsIntPod extends _$PrefsIntPod {
   Future<void> removeValue() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(key);
-    state = const AsyncData(null);
+    ref.invalidateSelf();
   }
 
   Future<void> setValue(int value) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(key, value);
-    state = AsyncData(value);
+    ref.invalidateSelf();
   }
 }

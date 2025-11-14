@@ -6,169 +6,92 @@ part of 'prefs_int_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsIntPodHash() => r'afbe5c95a48d660d2a1f7821ddee769e0a98a03e';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-abstract class _$PrefsIntPod extends BuildlessAutoDisposeAsyncNotifier<int?> {
-  late final String key;
-
-  FutureOr<int?> build(
-    String key,
-  );
-}
-
-/// See also [PrefsIntPod].
 @ProviderFor(PrefsIntPod)
-const prefsIntPodProvider = PrefsIntPodFamily();
+const prefsIntPodProvider = PrefsIntPodFamily._();
 
-/// See also [PrefsIntPod].
-class PrefsIntPodFamily extends Family<AsyncValue<int?>> {
-  /// See also [PrefsIntPod].
-  const PrefsIntPodFamily();
-
-  /// See also [PrefsIntPod].
-  PrefsIntPodProvider call(
-    String key,
-  ) {
-    return PrefsIntPodProvider(
-      key,
-    );
-  }
-
-  @override
-  PrefsIntPodProvider getProviderOverride(
-    covariant PrefsIntPodProvider provider,
-  ) {
-    return call(
-      provider.key,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'prefsIntPodProvider';
-}
-
-/// See also [PrefsIntPod].
-class PrefsIntPodProvider
-    extends AutoDisposeAsyncNotifierProviderImpl<PrefsIntPod, int?> {
-  /// See also [PrefsIntPod].
-  PrefsIntPodProvider(
-    String key,
-  ) : this._internal(
-          () => PrefsIntPod()..key = key,
-          from: prefsIntPodProvider,
+final class PrefsIntPodProvider
+    extends $AsyncNotifierProvider<PrefsIntPod, int?> {
+  const PrefsIntPodProvider._(
+      {required PrefsIntPodFamily super.from, required String super.argument})
+      : super(
+          retry: null,
           name: r'prefsIntPodProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$prefsIntPodHash,
-          dependencies: PrefsIntPodFamily._dependencies,
-          allTransitiveDependencies:
-              PrefsIntPodFamily._allTransitiveDependencies,
-          key: key,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  PrefsIntPodProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.key,
-  }) : super.internal();
-
-  final String key;
+  @override
+  String debugGetCreateSourceHash() => _$prefsIntPodHash();
 
   @override
-  FutureOr<int?> runNotifierBuild(
-    covariant PrefsIntPod notifier,
-  ) {
-    return notifier.build(
-      key,
-    );
+  String toString() {
+    return r'prefsIntPodProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(PrefsIntPod Function() create) {
-    return ProviderOverride(
-      origin: this,
-      override: PrefsIntPodProvider._internal(
-        () => create()..key = key,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        key: key,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeAsyncNotifierProviderElement<PrefsIntPod, int?> createElement() {
-    return _PrefsIntPodProviderElement(this);
-  }
+  PrefsIntPod create() => PrefsIntPod();
 
   @override
   bool operator ==(Object other) {
-    return other is PrefsIntPodProvider && other.key == key;
+    return other is PrefsIntPodProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, key.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin PrefsIntPodRef on AutoDisposeAsyncNotifierProviderRef<int?> {
-  /// The parameter `key` of this provider.
-  String get key;
-}
+String _$prefsIntPodHash() => r'4385195ad8eb8a36e11e6eb4060eaf2232aae462';
 
-class _PrefsIntPodProviderElement
-    extends AutoDisposeAsyncNotifierProviderElement<PrefsIntPod, int?>
-    with PrefsIntPodRef {
-  _PrefsIntPodProviderElement(super.provider);
+final class PrefsIntPodFamily extends $Family
+    with
+        $ClassFamilyOverride<PrefsIntPod, AsyncValue<int?>, int?,
+            FutureOr<int?>, String> {
+  const PrefsIntPodFamily._()
+      : super(
+          retry: null,
+          name: r'prefsIntPodProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  PrefsIntPodProvider call(
+    String key,
+  ) =>
+      PrefsIntPodProvider._(argument: key, from: this);
 
   @override
-  String get key => (origin as PrefsIntPodProvider).key;
+  String toString() => r'prefsIntPodProvider';
 }
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+
+abstract class _$PrefsIntPod extends $AsyncNotifier<int?> {
+  late final _$args = ref.$arg as String;
+  String get key => _$args;
+
+  FutureOr<int?> build(
+    String key,
+  );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build(
+      _$args,
+    );
+    final ref = this.ref as $Ref<AsyncValue<int?>, int?>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<AsyncValue<int?>, int?>,
+        AsyncValue<int?>,
+        Object?,
+        Object?>;
+    element.handleValue(ref, created);
+  }
+}

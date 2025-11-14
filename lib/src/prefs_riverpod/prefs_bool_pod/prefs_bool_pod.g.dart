@@ -6,169 +6,92 @@ part of 'prefs_bool_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsBoolPodHash() => r'7309205d5b8596bc7a2578c8686d8e0eb6aaaf0e';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-abstract class _$PrefsBoolPod extends BuildlessAutoDisposeAsyncNotifier<bool?> {
-  late final String key;
-
-  FutureOr<bool?> build(
-    String key,
-  );
-}
-
-/// See also [PrefsBoolPod].
 @ProviderFor(PrefsBoolPod)
-const prefsBoolPodProvider = PrefsBoolPodFamily();
+const prefsBoolPodProvider = PrefsBoolPodFamily._();
 
-/// See also [PrefsBoolPod].
-class PrefsBoolPodFamily extends Family<AsyncValue<bool?>> {
-  /// See also [PrefsBoolPod].
-  const PrefsBoolPodFamily();
-
-  /// See also [PrefsBoolPod].
-  PrefsBoolPodProvider call(
-    String key,
-  ) {
-    return PrefsBoolPodProvider(
-      key,
-    );
-  }
-
-  @override
-  PrefsBoolPodProvider getProviderOverride(
-    covariant PrefsBoolPodProvider provider,
-  ) {
-    return call(
-      provider.key,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'prefsBoolPodProvider';
-}
-
-/// See also [PrefsBoolPod].
-class PrefsBoolPodProvider
-    extends AutoDisposeAsyncNotifierProviderImpl<PrefsBoolPod, bool?> {
-  /// See also [PrefsBoolPod].
-  PrefsBoolPodProvider(
-    String key,
-  ) : this._internal(
-          () => PrefsBoolPod()..key = key,
-          from: prefsBoolPodProvider,
+final class PrefsBoolPodProvider
+    extends $AsyncNotifierProvider<PrefsBoolPod, bool?> {
+  const PrefsBoolPodProvider._(
+      {required PrefsBoolPodFamily super.from, required String super.argument})
+      : super(
+          retry: null,
           name: r'prefsBoolPodProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$prefsBoolPodHash,
-          dependencies: PrefsBoolPodFamily._dependencies,
-          allTransitiveDependencies:
-              PrefsBoolPodFamily._allTransitiveDependencies,
-          key: key,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  PrefsBoolPodProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.key,
-  }) : super.internal();
-
-  final String key;
+  @override
+  String debugGetCreateSourceHash() => _$prefsBoolPodHash();
 
   @override
-  FutureOr<bool?> runNotifierBuild(
-    covariant PrefsBoolPod notifier,
-  ) {
-    return notifier.build(
-      key,
-    );
+  String toString() {
+    return r'prefsBoolPodProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(PrefsBoolPod Function() create) {
-    return ProviderOverride(
-      origin: this,
-      override: PrefsBoolPodProvider._internal(
-        () => create()..key = key,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        key: key,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeAsyncNotifierProviderElement<PrefsBoolPod, bool?> createElement() {
-    return _PrefsBoolPodProviderElement(this);
-  }
+  PrefsBoolPod create() => PrefsBoolPod();
 
   @override
   bool operator ==(Object other) {
-    return other is PrefsBoolPodProvider && other.key == key;
+    return other is PrefsBoolPodProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, key.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin PrefsBoolPodRef on AutoDisposeAsyncNotifierProviderRef<bool?> {
-  /// The parameter `key` of this provider.
-  String get key;
-}
+String _$prefsBoolPodHash() => r'9acc853e0b89c837eb23e789a5c912ac88244639';
 
-class _PrefsBoolPodProviderElement
-    extends AutoDisposeAsyncNotifierProviderElement<PrefsBoolPod, bool?>
-    with PrefsBoolPodRef {
-  _PrefsBoolPodProviderElement(super.provider);
+final class PrefsBoolPodFamily extends $Family
+    with
+        $ClassFamilyOverride<PrefsBoolPod, AsyncValue<bool?>, bool?,
+            FutureOr<bool?>, String> {
+  const PrefsBoolPodFamily._()
+      : super(
+          retry: null,
+          name: r'prefsBoolPodProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  PrefsBoolPodProvider call(
+    String key,
+  ) =>
+      PrefsBoolPodProvider._(argument: key, from: this);
 
   @override
-  String get key => (origin as PrefsBoolPodProvider).key;
+  String toString() => r'prefsBoolPodProvider';
 }
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+
+abstract class _$PrefsBoolPod extends $AsyncNotifier<bool?> {
+  late final _$args = ref.$arg as String;
+  String get key => _$args;
+
+  FutureOr<bool?> build(
+    String key,
+  );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build(
+      _$args,
+    );
+    final ref = this.ref as $Ref<AsyncValue<bool?>, bool?>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<AsyncValue<bool?>, bool?>,
+        AsyncValue<bool?>,
+        Object?,
+        Object?>;
+    element.handleValue(ref, created);
+  }
+}

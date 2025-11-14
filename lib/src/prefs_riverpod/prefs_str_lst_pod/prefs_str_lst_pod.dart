@@ -14,12 +14,12 @@ class PrefsStrLstPod extends _$PrefsStrLstPod {
   Future<void> removeValue() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(key);
-    state = const AsyncData(null);
+    ref.invalidateSelf();
   }
 
   Future<void> setValue(List<String> value) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setStringList(key, value);
-    state = AsyncData(value);
+    ref.invalidateSelf();
   }
 }

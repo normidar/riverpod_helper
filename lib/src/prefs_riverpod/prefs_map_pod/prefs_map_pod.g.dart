@@ -6,172 +6,93 @@ part of 'prefs_map_pod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$prefsMapPodHash() => r'e2ba21ad210e263f00436815f427df9d9b1ebba0';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-abstract class _$PrefsMapPod
-    extends BuildlessAutoDisposeAsyncNotifier<Map<String, dynamic>?> {
-  late final String key;
-
-  FutureOr<Map<String, dynamic>?> build(
-    String key,
-  );
-}
-
-/// See also [PrefsMapPod].
 @ProviderFor(PrefsMapPod)
-const prefsMapPodProvider = PrefsMapPodFamily();
+const prefsMapPodProvider = PrefsMapPodFamily._();
 
-/// See also [PrefsMapPod].
-class PrefsMapPodFamily extends Family<AsyncValue<Map<String, dynamic>?>> {
-  /// See also [PrefsMapPod].
-  const PrefsMapPodFamily();
-
-  /// See also [PrefsMapPod].
-  PrefsMapPodProvider call(
-    String key,
-  ) {
-    return PrefsMapPodProvider(
-      key,
-    );
-  }
-
-  @override
-  PrefsMapPodProvider getProviderOverride(
-    covariant PrefsMapPodProvider provider,
-  ) {
-    return call(
-      provider.key,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'prefsMapPodProvider';
-}
-
-/// See also [PrefsMapPod].
-class PrefsMapPodProvider extends AutoDisposeAsyncNotifierProviderImpl<
-    PrefsMapPod, Map<String, dynamic>?> {
-  /// See also [PrefsMapPod].
-  PrefsMapPodProvider(
-    String key,
-  ) : this._internal(
-          () => PrefsMapPod()..key = key,
-          from: prefsMapPodProvider,
+final class PrefsMapPodProvider
+    extends $AsyncNotifierProvider<PrefsMapPod, Map<String, dynamic>?> {
+  const PrefsMapPodProvider._(
+      {required PrefsMapPodFamily super.from, required String super.argument})
+      : super(
+          retry: null,
           name: r'prefsMapPodProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$prefsMapPodHash,
-          dependencies: PrefsMapPodFamily._dependencies,
-          allTransitiveDependencies:
-              PrefsMapPodFamily._allTransitiveDependencies,
-          key: key,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  PrefsMapPodProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.key,
-  }) : super.internal();
-
-  final String key;
+  @override
+  String debugGetCreateSourceHash() => _$prefsMapPodHash();
 
   @override
-  FutureOr<Map<String, dynamic>?> runNotifierBuild(
-    covariant PrefsMapPod notifier,
-  ) {
-    return notifier.build(
-      key,
-    );
+  String toString() {
+    return r'prefsMapPodProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(PrefsMapPod Function() create) {
-    return ProviderOverride(
-      origin: this,
-      override: PrefsMapPodProvider._internal(
-        () => create()..key = key,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        key: key,
-      ),
-    );
-  }
-
-  @override
-  AutoDisposeAsyncNotifierProviderElement<PrefsMapPod, Map<String, dynamic>?>
-      createElement() {
-    return _PrefsMapPodProviderElement(this);
-  }
+  PrefsMapPod create() => PrefsMapPod();
 
   @override
   bool operator ==(Object other) {
-    return other is PrefsMapPodProvider && other.key == key;
+    return other is PrefsMapPodProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, key.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin PrefsMapPodRef
-    on AutoDisposeAsyncNotifierProviderRef<Map<String, dynamic>?> {
-  /// The parameter `key` of this provider.
-  String get key;
-}
+String _$prefsMapPodHash() => r'f1913cf4315b7bafef7b079390316b6e607c7c44';
 
-class _PrefsMapPodProviderElement
-    extends AutoDisposeAsyncNotifierProviderElement<PrefsMapPod,
-        Map<String, dynamic>?> with PrefsMapPodRef {
-  _PrefsMapPodProviderElement(super.provider);
+final class PrefsMapPodFamily extends $Family
+    with
+        $ClassFamilyOverride<PrefsMapPod, AsyncValue<Map<String, dynamic>?>,
+            Map<String, dynamic>?, FutureOr<Map<String, dynamic>?>, String> {
+  const PrefsMapPodFamily._()
+      : super(
+          retry: null,
+          name: r'prefsMapPodProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  PrefsMapPodProvider call(
+    String key,
+  ) =>
+      PrefsMapPodProvider._(argument: key, from: this);
 
   @override
-  String get key => (origin as PrefsMapPodProvider).key;
+  String toString() => r'prefsMapPodProvider';
 }
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+
+abstract class _$PrefsMapPod extends $AsyncNotifier<Map<String, dynamic>?> {
+  late final _$args = ref.$arg as String;
+  String get key => _$args;
+
+  FutureOr<Map<String, dynamic>?> build(
+    String key,
+  );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final created = build(
+      _$args,
+    );
+    final ref = this.ref
+        as $Ref<AsyncValue<Map<String, dynamic>?>, Map<String, dynamic>?>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<AsyncValue<Map<String, dynamic>?>, Map<String, dynamic>?>,
+        AsyncValue<Map<String, dynamic>?>,
+        Object?,
+        Object?>;
+    element.handleValue(ref, created);
+  }
+}
